@@ -97,6 +97,18 @@ class _CartItemState extends State<CartItem> {
                   ),
                   Row(
                     children: <Widget>[
+                      Row(
+                        children: <Widget>[
+                          const Text("Stok: "),
+                          const SizedBox(
+                            width: 5,
+                          ),
+                          Text(
+                            formatter.format(int.parse(widget.item['product']['stok'])),
+                            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
+                          )
+                        ],
+                      ),
                       const Spacer(),
                       Row(
                         children: <Widget>[
